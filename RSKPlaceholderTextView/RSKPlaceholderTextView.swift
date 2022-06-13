@@ -206,7 +206,7 @@ import UIKit
             let attributedPlaceholder = self.attributedPlaceholder,
             attributedPlaceholder.length > 0 else {
             
-            return super.caretRect(for: position)
+            return position == nil ? .zero : super.caretRect(for: position)
         }
         
         var caretRect = super.caretRect(for: position)
